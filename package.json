@@ -1,17 +1,24 @@
 {
+  "name": "async-wait-for",
+  "version": "0.1.0",
+  "description": "Async wait for",
+  "main": "build/index.js",
+  "types": "build/index.d.ts",
+  "repository": "git@github.com:tylerlong/async-wait-for.git",
+  "author": "Tyler Liu <tyler4long@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "prepublishOnly": "rm -rf build && tsc && gts fix"
+  },
   "devDependencies": {
     "gts": "^2.0.2",
     "yarn-upgrade-all": "^0.5.2",
     "typescript": "^3.8.3",
     "@types/node": "^13.11.1"
   },
-  "scripts": {
-    "check": "gts check",
-    "clean": "gts clean",
-    "compile": "tsc",
-    "fix": "gts fix",
-    "prepare": "yarn run compile",
-    "pretest": "yarn run compile",
-    "posttest": "yarn run check"
+  "husky": {
+    "hooks": {
+      "pre-push": "gts fix"
+    }
   }
 }

@@ -1,24 +1,22 @@
-console.log('Try npm run check/fix!');
+const waitFor = async (
+  condition: () => boolean,
+  interval = 1000,
+  times = Infinity
+): Promise<boolean> => {
+  return new Promise<boolean>(resolve => {
+    let count = 0;
+    const handle = setInterval(() => {
+      if (condition()) {
+        clearInterval(handle);
+        resolve(true);
+      }
+      count += 1;
+      if (count >= times) {
+        clearInterval(handle);
+        resolve(false);
+      }
+    }, interval);
+  });
+};
 
-const longString =
-  'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer ut aliquet diam.';
-
-const trailing = 'Semicolon';
-
-const why = 'am I tabbed?';
-
-export function doSomeStuff(
-  withThis: string,
-  andThat: string,
-  andThose: string[]
-) {
-  //function on one line
-  if (!andThose.length) {
-    return false;
-  }
-  console.log(withThis);
-  console.log(andThat);
-  console.dir(andThose);
-  return;
-}
-// TODO: more examples
+export default waitFor;
