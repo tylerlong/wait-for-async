@@ -44,7 +44,7 @@ let downloaded = false;
 await waitFor(() => downloaded, 1000, 60)
 ```
 
-### Pause the app for 3 seconds
+### "Delay" the app for 3 seconds
 
 ```ts
 await waitFor(() => true, 3000);
