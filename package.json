@@ -1,10 +1,10 @@
 {
-  "name": "async-wait-for",
+  "name": "wait-for-async",
   "version": "0.1.0",
   "description": "Async wait for",
   "main": "build/index.js",
   "types": "build/index.d.ts",
-  "repository": "git@github.com:tylerlong/async-wait-for.git",
+  "repository": "git@github.com:tylerlong/wait-for-async.git",
   "author": "Tyler Liu <tyler4long@gmail.com>",
   "license": "MIT",
   "scripts": {

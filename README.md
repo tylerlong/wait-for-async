@@ -1,7 +1,7 @@
-# async-wait-for
+# wait-for-async
 
 ```ts
-import waitFor from `async-wait-for`;
+import waitFor from `wait-for-async`;
 
 const result = await waitFor(condition, interval, times);
 
