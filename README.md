@@ -61,8 +61,3 @@ Check `downloaded`'s value every second (`interval`'s default value is 1000ms), 
 ```ts
 await waitFor({ interval: 3000 });
 ```
-
-
-## Todo
-
-- Progressive internal
