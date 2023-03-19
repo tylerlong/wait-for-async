@@ -1,8 +1,8 @@
-type WaitForOptions = {
+interface WaitForOptions {
   interval?: number;
   condition?: () => boolean;
   times?: number;
-};
+}
 
 const defaultOptions: WaitForOptions = {
   interval: 1000,
@@ -11,11 +11,11 @@ const defaultOptions: WaitForOptions = {
 };
 
 const waitFor = async (waitForOptions: WaitForOptions): Promise<boolean> => {
-  const {interval, condition, times} = {
+  const { interval, condition, times } = {
     ...defaultOptions,
     ...waitForOptions,
   };
-  return new Promise<boolean>(resolve => {
+  return new Promise<boolean>((resolve) => {
     let count = 0;
     const handle = setInterval(() => {
       if (condition!()) {

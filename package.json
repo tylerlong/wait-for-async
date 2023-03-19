@@ -1,24 +1,28 @@
 {
-  "name": "wait-for-async",
+  "license": "MIT",
   "version": "0.6.0",
+  "scripts": {
+    "lint": "eslint --fix '**/*.{ts,tsx,js,jsx}' && prettier --write .",
+    "prepublishOnly": "rm -rf lib && tsc src/index.ts --outDir lib --declaration"
+  },
+  "name": "wait-for-async",
   "description": "Async wait for",
-  "main": "build/index.js",
-  "types": "build/index.d.ts",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
   "repository": "git@github.com:tylerlong/wait-for-async.git",
   "author": "Tyler Liu <tyler4long@gmail.com>",
-  "license": "MIT",
-  "scripts": {
-    "prepublishOnly": "rm -rf build && tsc"
-  },
   "devDependencies": {
-    "@types/node": "^16.11.6",
-    "gts": "^3.1.0",
-    "typescript": "^4.4.4",
-    "yarn-upgrade-all": "^0.5.4"
-  },
-  "husky": {
-    "hooks": {
-      "pre-push": "gts fix"
-    }
+    "@types/node": "^18.15.3",
+    "@typescript-eslint/eslint-plugin": "^5.55.0",
+    "@typescript-eslint/parser": "^5.55.0",
+    "eslint": "^8.36.0",
+    "eslint-config-alloy": "^4.9.0",
+    "eslint-config-prettier": "^8.7.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "prettier": "^2.8.4",
+    "ts-node": "^10.9.1",
+    "ttpt": "^0.3.2",
+    "typescript": "^5.0.2",
+    "yarn-upgrade-all": "^0.7.2"
   }
 }

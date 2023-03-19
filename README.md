@@ -10,12 +10,11 @@ Wait for `condition()` to be `true`. Its value is checked every `interval` milli
 
 Whenever `condition()` becomes `true`, return `true`. If `condition()` never becomes `true` until `times` intervals passed, return `false`.
 
-
 ## Parameters explained
 
 ### interval
 
-The intervals (in milliseconds) on how often to check `condition()`'s value. 
+The intervals (in milliseconds) on how often to check `condition()`'s value.
 
 Default value is `1000`.
 
@@ -29,7 +28,7 @@ Default value is `() => true`.
 
 ### times
 
-How many times in total to check `condition()`'s value before giving up. 
+How many times in total to check `condition()`'s value before giving up.
 
 Default value is `Infinity`.
 
@@ -41,9 +40,7 @@ This is the maximum times to check. Fewer times to check if `condition()`'s valu
 
 Or simply put, `condition()`'s value will be returned.
 
-
 ## Interesting use cases
-
 
 ### Wait for file downloading
 
