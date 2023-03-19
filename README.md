@@ -6,33 +6,34 @@ import waitFor from `wait-for-async`;
 await waitFor({ interval, condition, times });
 ```
 
-Wait for `condition()` to be `true`. Its value is checked every `interval` milliseconds, check no more than `times` intervals in total.
+Wait for `condition()` to be `true`.
+Its value is checked every `interval` milliseconds,
+check no more than `times` intervals in total.
 
-Whenever `condition()` becomes `true`, return `true`. If `condition()` never becomes `true` until `times` intervals passed, return `false`.
+Whenever `condition()` becomes `true`, return `true`.
+If `condition()` never becomes `true` until `times` intervals passed, return `false`.
 
 ## Parameters explained
 
 ### interval
 
 The intervals (in milliseconds) on how often to check `condition()`'s value.
+The default value is `1000`.
 
-Default value is `1000`.
-
-At least 1 interval will be waited before `condition()` is checked, even if `condition()` is `true` at the very beginning.
+At least 1 interval will be waited before `condition()` is checked,
+even if `condition()` is `true` at the very beginning.
 
 ### condition
 
-`condition()` is a method which returns `true` or `false`.
-
-Default value is `() => true`.
+`condition()` is a method that returns `true` or `false`.
+The default value is `() => true`.
 
 ### times
 
 How many times in total to check `condition()`'s value before giving up.
+The default value is `Infinity`.
 
-Default value is `Infinity`.
-
-This is the maximum times to check. Fewer times to check if `condition()`'s value becomes `true` sooner.
+These are the maximum times to check. Fewer times to check if `condition()`'s value becomes `true` sooner.
 
 ### return value
 
@@ -44,14 +45,8 @@ Or simply put, `condition()`'s value will be returned.
 
 ### Wait for file downloading
 
-```ts
-let downloaded = false;
-await waitFor({ condition: () => downloaded, times: 60)
-```
-
-Wait for `downloaded` to become `true` (this variable should be updated by the file downloading code).
-
-Check `downloaded`'s value every second (`interval`'s default value is 1000ms), and give up after 60 seconds(60 checks).
+Wait for the `download` to become `true` (this variable should be updated by the file downloading code).
+Check the `download` value every second (the `interval`'s default value is 1000ms), and give up after 60 seconds(60 checks).
 
 ### "Delay" the app for 3 seconds
 
