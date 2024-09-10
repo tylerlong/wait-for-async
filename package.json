@@ -1,28 +1,35 @@
 {
-  "license": "MIT",
-  "version": "0.6.1",
-  "scripts": {
-    "lint": "eslint --fix '**/*.{ts,tsx,js,jsx}' && prettier --write .",
-    "prepublishOnly": "rm -rf lib && tsc src/index.ts --outDir lib --declaration"
-  },
   "name": "wait-for-async",
+  "version": "0.7.0",
   "description": "Async wait for",
-  "main": "lib/index.js",
-  "types": "lib/index.d.ts",
   "repository": "git@github.com:tylerlong/wait-for-async.git",
+  "license": "MIT",
   "author": "Tyler Liu <tyler4long@gmail.com>",
+  "main": "index.js",
+  "types": "index.d.ts",
+  "scripts": {
+    "lint": "tsc --jsx react --skipLibCheck --noEmit --target ESNext --moduleResolution NodeNext --module NodeNext ./src/*.ts && eslint --fix '**/*.{ts,tsx,js,jsx}' && prettier --write . && sort-package-json",
+    "prepublishOnly": "tsc src/index.ts --outDir . --declaration",
+    "postpublish": "rm -rf index.*"
+  },
   "devDependencies": {
-    "@types/node": "^18.15.3",
-    "@typescript-eslint/eslint-plugin": "^5.55.0",
-    "@typescript-eslint/parser": "^5.55.0",
-    "eslint": "^8.36.0",
-    "eslint-config-alloy": "^4.9.0",
-    "eslint-config-prettier": "^8.7.0",
-    "eslint-plugin-prettier": "^4.2.1",
-    "prettier": "^2.8.4",
-    "ts-node": "^10.9.1",
-    "ttpt": "^0.3.2",
-    "typescript": "^5.0.2",
-    "yarn-upgrade-all": "^0.7.2"
+    "@types/node": "^22.5.4",
+    "@typescript-eslint/eslint-plugin": "^8.5.0",
+    "@typescript-eslint/parser": "^8.5.0",
+    "eslint": "8.57.0",
+    "eslint-config-alloy": "^5.1.2",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-prettier": "^5.2.1",
+    "prettier": "^3.3.3",
+    "sort-package-json": "^2.10.1",
+    "ts-node": "^10.9.2",
+    "ttpt": "^0.12.1",
+    "typescript": "^5.6.2",
+    "yarn-upgrade-all": "^0.7.4"
+  },
+  "yarn-upgrade-all": {
+    "ignore": [
+      "eslint"
+    ]
   }
 }

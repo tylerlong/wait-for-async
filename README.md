@@ -18,7 +18,7 @@ If `condition()` never becomes `true` until `times` intervals passed, return `fa
 ### interval
 
 The intervals (in milliseconds) on how often to check `condition()`'s value.
-The default value is `1000`.
+The default value is `100`.
 
 At least 1 interval will be waited before `condition()` is checked,
 even if `condition()` is `true` at the very beginning.
@@ -46,7 +46,7 @@ Or simply put, `condition()`'s value will be returned.
 ### Wait for file downloading
 
 Wait for the `download` to become `true` (this variable should be updated by the file downloading code).
-Check the `download` value every second (the `interval`'s default value is 1000ms), and give up after 60 seconds(60 checks).
+Check the `download` value every second (the `interval`'s default value is 100ms), and give up after 60 seconds(60 checks).
 
 ### "Delay" the app for 3 seconds
 

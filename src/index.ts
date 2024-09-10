@@ -1,7 +1,7 @@
 interface WaitForOptions {
   /**
    * How long to wait before checking condition.
-   * Default value is 1 second.
+   * Default value is 100 millisecond.
    */
   interval?: number;
   /**
@@ -18,7 +18,7 @@ interface WaitForOptions {
 }
 
 const defaultOptions: WaitForOptions = {
-  interval: 1000,
+  interval: 100,
   condition: () => true,
   times: Infinity,
 };
