@@ -1,0 +1,9 @@
+{
+  "compilerOptions": {
+    "outDir": "lib",
+    "declaration": true,
+    "module": "nodenext",
+    "moduleResolution": "nodenext"
+  },
+  "files": ["src/index.ts"]
+}

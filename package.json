@@ -1,34 +1,18 @@
 {
   "name": "wait-for-async",
-  "version": "0.7.0",
+  "version": "0.7.1",
   "description": "Async wait for",
   "repository": "git@github.com:tylerlong/wait-for-async.git",
   "license": "MIT",
-  "main": "index.js",
-  "types": "index.d.ts",
+  "type": "module",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
   "scripts": {
-    "lint": "tsc --jsx react --skipLibCheck --noEmit --target ESNext --moduleResolution NodeNext --module NodeNext ./src/*.ts && eslint --fix '**/*.{ts,tsx,js,jsx}' && prettier --write . && sort-package-json",
-    "prepublishOnly": "tsc src/index.ts --outDir . --declaration",
-    "postpublish": "rm -rf index.*"
+    "prepublishOnly": "tsc",
+    "postpublish": "rm -rf lib"
   },
   "devDependencies": {
-    "@types/node": "^22.10.2",
-    "@typescript-eslint/eslint-plugin": "^8.18.1",
-    "@typescript-eslint/parser": "^8.18.1",
-    "eslint": "8.57.0",
-    "eslint-config-alloy": "^5.1.2",
-    "eslint-config-prettier": "^9.1.0",
-    "eslint-plugin-prettier": "^5.2.1",
-    "prettier": "^3.4.2",
-    "sort-package-json": "^2.12.0",
-    "ts-node": "^10.9.2",
-    "ttpt": "^0.13.0",
     "typescript": "^5.7.2",
     "yarn-upgrade-all": "^0.7.4"
-  },
-  "yarn-upgrade-all": {
-    "ignore": [
-      "eslint"
-    ]
   }
 }
