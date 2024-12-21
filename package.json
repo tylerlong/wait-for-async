@@ -1,6 +1,6 @@
 {
   "name": "wait-for-async",
-  "version": "0.7.1",
+  "version": "0.7.2",
   "description": "Async wait for",
   "repository": "git@github.com:tylerlong/wait-for-async.git",
   "license": "MIT",

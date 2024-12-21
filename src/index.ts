@@ -31,7 +31,7 @@ const defaultOptions: WaitForOptions = {
  * @returns Whenever `condition()` becomes `true`, return `true`.
  * If `condition()` never becomes `true` until `times` intervals passed, return `false`.
  */
-const waitFor = async (waitForOptions: WaitForOptions): Promise<boolean> => {
+const waitFor = (waitForOptions: WaitForOptions): Promise<boolean> => {
   const { interval, condition, times } = {
     ...defaultOptions,
     ...waitForOptions,
