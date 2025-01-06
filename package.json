@@ -1,17 +1,20 @@
 {
   "name": "wait-for-async",
-  "version": "0.7.4",
+  "version": "0.7.5",
   "description": "Async wait for",
-  "repository": "git@github.com:tylerlong/wait-for-async.git",
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/tylerlong/wait-for-async.git"
+  },
   "license": "MIT",
+  "types": "./dist/index.d.ts",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
-  "types": "./dist/index.d.ts",
   "exports": {
     ".": {
+      "types": "./dist/index.d.ts",
       "require": "./dist/index.js",
-      "import": "./dist/index.mjs",
-      "types": "./dist/index.d.ts"
+      "import": "./dist/index.mjs"
     }
   },
   "scripts": {
@@ -23,5 +26,7 @@
     "typescript": "^5.7.2",
     "yarn-upgrade-all": "^0.7.4"
   },
-  "files": ["dist"]
+  "files": [
+    "dist"
+  ]
 }
