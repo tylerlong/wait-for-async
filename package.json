@@ -1,29 +1,32 @@
 {
   "name": "wait-for-async",
-  "version": "0.7.5",
+  "version": "0.7.9",
   "description": "Async wait for",
   "repository": {
     "type": "git",
     "url": "git+ssh://git@github.com/tylerlong/wait-for-async.git"
   },
   "license": "MIT",
-  "types": "./dist/index.d.ts",
-  "main": "./dist/index.js",
-  "module": "./dist/index.mjs",
+  "types": "./dist/esm/index.d.ts",
+  "main": "./dist/cjs/index.cjs",
+  "module": "./dist/esm/index.js",
+  "type": "module",
   "exports": {
     ".": {
-      "types": "./dist/index.d.ts",
-      "require": "./dist/index.js",
-      "import": "./dist/index.mjs"
+      "types": "./dist/esm/index.d.ts",
+      "require": "./dist/cjs/index.cjs",
+      "import": "./dist/esm/index.js"
     }
   },
   "scripts": {
-    "prepublishOnly": "tsup src/index.ts --format cjs,esm --dts --clean",
-    "postpublish": "rm -rf dist"
+    "prepublishOnly": "yarn build && mv dist/cjs/index.js dist/cjs/index.cjs",
+    "postpublish": "rm -rf dist",
+    "build:esm": "tsc --module ESNext --outDir dist/esm",
+    "build:cjs": "tsc --module CommonJS --outDir dist/cjs --declaration false",
+    "build": "yarn build:esm && yarn build:cjs"
   },
   "devDependencies": {
-    "tsup": "^8.3.5",
-    "typescript": "^5.7.2",
+    "typescript": "^5.7.3",
     "yarn-upgrade-all": "^0.7.4"
   },
   "files": [
