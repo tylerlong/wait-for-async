@@ -1,0 +1,12 @@
+{
+  "compilerOptions": {
+    "esModuleInterop": true,
+    "module": "NodeNext",
+    "moduleResolution": "nodenext",
+    "target": "ES2022",
+    "declaration": true,
+    "outDir": "./dist/esm",
+    "skipLibCheck": true
+  },
+  "include": ["src/**/*.ts"]
+}
