@@ -39,7 +39,7 @@ const waitFor = (waitForOptions: WaitForOptions): Promise<boolean> => {
   return new Promise<boolean>((resolve) => {
     let count = 0;
     const handle = setInterval(() => {
-      if (condition!()) {
+      if (condition!() === true) {
         clearInterval(handle);
         resolve(true);
       }
