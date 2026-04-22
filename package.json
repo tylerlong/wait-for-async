@@ -1,6 +1,6 @@
 {
   "name": "wait-for-async",
-  "version": "0.8.0",
+  "version": "0.8.1",
   "description": "Async wait for",
   "repository": {
     "type": "git",
