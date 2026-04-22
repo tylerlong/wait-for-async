@@ -23,8 +23,8 @@
     "build": "tsc -p tsconfig.esm.json && tsc -p tsconfig.cjs.json && echo '{\"type\":\"module\"}' > dist/esm/package.json && echo '{\"type\":\"commonjs\"}' > dist/cjs/package.json"
   },
   "devDependencies": {
-    "typescript": "^5.9.3",
-    "yarn-upgrade-all": "^0.7.5"
+    "typescript": "^6.0.3",
+    "yarn-upgrade-all": "^0.8.1"
   },
   "files": [
     "dist"

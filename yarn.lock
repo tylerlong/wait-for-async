@@ -7,14 +7,14 @@ color-loggers@^0.3.2:
   resolved "https://registry.yarnpkg.com/color-loggers/-/color-loggers-0.3.2.tgz#04b12224f4ef3f78c1bdfb238f2cee50f72d7e51"
   integrity sha512-asfXyY1/9N+Cxt30jb0PFy5tccybuMnWVc9J8EJuYoJVlcsUshn+pt2QuyUB3BWKMXVvEH8jgLrCFs11Am8QZA==
 
-typescript@^5.9.3:
-  version "5.9.3"
-  resolved "https://registry.yarnpkg.com/typescript/-/typescript-5.9.3.tgz#5b4f59e15310ab17a216f5d6cf53ee476ede670f"
-  integrity sha512-jl1vZzPDinLr9eUt3J/t7V6FgNEw9QjvBPdysz9KfQDD41fQrC2Y4vKQdiaUpFT4bXlb1RHhLpp8wtm6M5TgSw==
+typescript@^6.0.3:
+  version "6.0.3"
+  resolved "https://registry.yarnpkg.com/typescript/-/typescript-6.0.3.tgz#90251dc007916e972786cb94d74d15b185577d21"
+  integrity sha512-y2TvuxSZPDyQakkFRPZHKFm+KKVqIisdg9/CZwm9ftvKXLP8NRWj38/ODjNbr43SsoXqNuAisEf1GdCxqWcdBw==
 
-yarn-upgrade-all@^0.7.5:
-  version "0.7.5"
-  resolved "https://registry.yarnpkg.com/yarn-upgrade-all/-/yarn-upgrade-all-0.7.5.tgz#dc0a8335234298a6d548d0956d78c45471aa34e8"
-  integrity sha512-yC2DgKX2Vzeb4LznSHukF/U5AapE7i/A4cBoh8P2FsEy1RBPaXEdd320ZK5Phgj6/Y/1pmFkP36S7GxS0YrzCg==
+yarn-upgrade-all@^0.8.1:
+  version "0.8.1"
+  resolved "https://registry.yarnpkg.com/yarn-upgrade-all/-/yarn-upgrade-all-0.8.1.tgz#facb7fc20f5a9038396f87b52b73c51baadfcea8"
+  integrity sha512-th40yKDBrjfOGtaIfF12+g2DdSxt7jREPcJczYXOVP+kN0tshG5TuP6mV73DyOdwPNH/QxO7ocrqoCk1kqIpUA==
   dependencies:
     color-loggers "^0.3.2"
